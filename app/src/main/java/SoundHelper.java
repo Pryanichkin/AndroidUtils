@@ -1,5 +1,3 @@
-package com.pbteamstudio.androidutils;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.res.AssetFileDescriptor;
