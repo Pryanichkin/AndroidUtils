@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/search_for_user_music_button"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill"
+        android:clickable="true"
+        android:onClick=""
+        android:layout_weight="0"
+        android:text="Choose"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        tools:ignore="HardcodedText" />
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:choiceMode="singleChoice" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill"
+        android:clickable="true"
+        android:onClick=""
+        android:layout_weight="0"
+        android:text="ok"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

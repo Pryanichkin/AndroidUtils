@@ -1,4 +1,4 @@
-package Helpers;
+package sound;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -32,9 +32,8 @@ class SoundHelper {
     /**
      * Get instance of this class
      *
-     * @param activity - current Activity
+     * @param activity   - current Activity
      * @param soundNames - Array of the soundNames (name.extension)
-     *
      * @return instance of {@link SoundHelper}
      */
     public static SoundHelper getInstance(Activity activity, String[] soundNames) {
@@ -67,7 +66,7 @@ class SoundHelper {
 
     /**
      * Create {@link SoundPool} for Api >= {@link android.os.Build.VERSION_CODES#LOLLIPOP}
-    */
+     */
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void createNewSoundPool() {
         AudioAttributes attributes = new AudioAttributes.Builder()
@@ -89,7 +88,7 @@ class SoundHelper {
     }
 
     private void setSoundIDAndLoadIt(String[] soundNames) {
-        for (String soundName: soundNames) {
+        for (String soundName : soundNames) {
             sounds.put(soundName, loadSound(soundName));
         }
     }
@@ -107,7 +106,6 @@ class SoundHelper {
      * Play sound with given soundId
      *
      * @param soundId - ID of sound received by {@link SoundHelper#loadSound(String)}
-     *
      * @return true, if load was successful and false, if not
      */
     private boolean playSound(int soundId) {
@@ -125,19 +123,17 @@ class SoundHelper {
      * Play sound with given soundId
      *
      * @param soundName - name of the Sound (name.extension)
-     *
      * @return int>0, if play was successful and (-1), if not
      */
     public boolean playSound(String soundName) {
         int soundId = sounds.get(soundName);
-        return playSound(soundId>0?soundId:(-1));
+        return playSound(soundId > 0 ? soundId : (-1));
     }
 
     /**
      * Load sound with {@link AssetFileDescriptor} and get int id
      *
      * @param soundName - name of the Sound (name.extension)
-     *
      * @return int>0, if load was successful and (-1), if not
      */
     private int loadSound(String soundName) {
