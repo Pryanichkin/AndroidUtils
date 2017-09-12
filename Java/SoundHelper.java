@@ -17,9 +17,6 @@ import java.util.Map;
  * Singleton class for play sounds
  * <p>!Sound should be in folder <q>main/assets</q></p>
  *
- *
- *
- *
  * @author Pryanichkin S.V. pbteamstudio.com
  * @version 1.0
  */
