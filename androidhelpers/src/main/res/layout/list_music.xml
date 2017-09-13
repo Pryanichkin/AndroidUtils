@@ -7,11 +7,9 @@
 
     <Button
         android:layout_width="match_parent"
-        android:id="@+id/search_for_user_music_button"
+        android:id="@+id/choose_button"
         android:layout_height="wrap_content"
         android:layout_gravity="fill"
-        android:clickable="true"
-        android:onClick=""
         android:layout_weight="0"
         android:text="Choose"
         android:textAlignment="center"
@@ -28,11 +26,10 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/close_button"
         android:layout_gravity="fill"
-        android:clickable="true"
-        android:onClick=""
         android:layout_weight="0"
-        android:text="ok"
+        android:text="Close"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         tools:ignore="HardcodedText" />

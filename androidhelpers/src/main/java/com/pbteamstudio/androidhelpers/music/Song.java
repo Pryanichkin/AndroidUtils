@@ -1,4 +1,4 @@
-package music;
+package com.pbteamstudio.androidhelpers.music;
 
 import java.io.Serializable;
 

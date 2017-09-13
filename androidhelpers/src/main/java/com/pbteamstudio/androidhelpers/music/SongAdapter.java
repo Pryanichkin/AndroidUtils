@@ -1,4 +1,4 @@
-package music;
+package com.pbteamstudio.androidhelpers.music;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.pbteamstudio.androidutils.R;
+import com.pbteamstudio.androidhelpers.R;
 
 import java.util.ArrayList;
 

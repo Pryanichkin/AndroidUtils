@@ -1,4 +1,4 @@
-package music;
+package com.pbteamstudio.androidhelpers.music;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Singleton class for play music from {@link Song}
+ * Singleton class for play com.pbteamstudio.androidhelpers.music from {@link Song}
  *
  * @author Pryanichkin S.V. pbteamstudio.com
  * @version 1.0
@@ -51,7 +51,7 @@ public class MusicHelper {
     }
 
     /**
-     * Play music with given parameters
+     * Play com.pbteamstudio.androidhelpers.music with given parameters
      *
      * @param activity            - current {@link Activity}
      * @param song                - {@link Song}
@@ -70,12 +70,12 @@ public class MusicHelper {
                     rightVolume);
             curSong = song;
         } catch (Exception e) {
-            Log.e("MusicHelper", "Problem with get or play music fro, Uri");
+            Log.e("MusicHelper", "Problem with get or play com.pbteamstudio.androidhelpers.music fro, Uri");
         }
     }
 
     /**
-     * Play music with standard parameters (Play from paused, looping forever, volume 1.0f)
+     * Play com.pbteamstudio.androidhelpers.music with standard parameters (Play from paused, looping forever, volume 1.0f)
      *
      * @param activity - current {@link Activity}
      * @param song     - {@link Song}
@@ -87,12 +87,12 @@ public class MusicHelper {
             playMusicFromURI(activity, songUri, song, true, true, 1.0f, 1.0f);
             curSong = song;
         } catch (Exception e) {
-            Log.e("MusicHelper", "Problem with get or play music fro, Uri");
+            Log.e("MusicHelper", "Problem with get or play com.pbteamstudio.androidhelpers.music fro, Uri");
         }
     }
 
     /**
-     * Private method to play music with given parameters
+     * Private method to play com.pbteamstudio.androidhelpers.music with given parameters
      *
      * @param activity            - current {@link Activity}
      * @param uri                 - {@link Uri} of user's song
@@ -123,7 +123,7 @@ public class MusicHelper {
     }
 
     /**
-     * Stop play music, release resources and clear current song's time position
+     * Stop play com.pbteamstudio.androidhelpers.music, release resources and clear current song's time position
      */
     public void stopPlayer() {
         if (musicPlayer != null) {
@@ -137,7 +137,7 @@ public class MusicHelper {
     }
 
     /**
-     * Pause play music, release resources and remember current song's time position
+     * Pause play com.pbteamstudio.androidhelpers.music, release resources and remember current song's time position
      */
     public void pausePlayer() {
         if (musicPlayer != null) {
@@ -171,7 +171,7 @@ public class MusicHelper {
     }
 
     /**
-     * Search for user's music on device and return {@link ArrayList} for {@link SongAdapter}
+     * Search for user's com.pbteamstudio.androidhelpers.music on device and return {@link ArrayList} for {@link SongAdapter}
      * @param activity - current {@link Activity}
      * @return sorted by Artist{@link ArrayList} of user's songs
      */

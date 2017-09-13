@@ -1,4 +1,4 @@
-package sound;
+package com.pbteamstudio.androidhelpers.sound;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -103,9 +103,9 @@ class SoundHelper {
     }
 
     /**
-     * Play sound with given soundId
+     * Play com.pbteamstudio.androidhelpers.sound with given soundId
      *
-     * @param soundId - ID of sound received by {@link SoundHelper#loadSound(String)}
+     * @param soundId - ID of com.pbteamstudio.androidhelpers.sound received by {@link SoundHelper#loadSound(String)}
      * @return true, if load was successful and false, if not
      */
     private boolean playSound(int soundId) {
@@ -120,7 +120,7 @@ class SoundHelper {
     }
 
     /**
-     * Play sound with given soundId
+     * Play com.pbteamstudio.androidhelpers.sound with given soundId
      *
      * @param soundName - name of the Sound (name.extension)
      * @return int>0, if play was successful and (-1), if not
@@ -131,7 +131,7 @@ class SoundHelper {
     }
 
     /**
-     * Load sound with {@link AssetFileDescriptor} and get int id
+     * Load com.pbteamstudio.androidhelpers.sound with {@link AssetFileDescriptor} and get int id
      *
      * @param soundName - name of the Sound (name.extension)
      * @return int>0, if load was successful and (-1), if not
