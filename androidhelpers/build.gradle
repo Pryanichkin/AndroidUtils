@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+def getBintrayUserProperty() {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    def user = properties.getProperty('bintray.user')
+    println(user)
+    return user
+}
+
+def getBintrayApiKeyProperty() {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    def key = properties.getProperty('bintray.apikey')
+    println(key)
+    return key
+}
+
+publish {
+    userOrg = 'pbteamstudio'
+    groupId = 'com.pbteamstudio'
+    artifactId = 'android-helpers'
+    publishVersion = '0.0.1'
+    desc = 'Helpers for play Audio, Music. And preferences Helper.'
+    website = 'https://github.com/Pryanichkin/AndroidUtils'
+    bintrayUser = getBintrayUserProperty()
+    bintrayKey = getBintrayApiKeyProperty()
+    dryRun = 'false'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+}
